@@ -7,7 +7,7 @@ Autore        : Giovanni Bellorio
 '''
 
 # -- start
-nome_programma = "conta_le_vocali.py"
+nome_programma = "conta_le_vocalii.py"
 print("Inizio esecuzione", nome_programma)
 
 # -- input
