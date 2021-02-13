@@ -2,13 +2,13 @@
 
 ## App android
 
-Francesco Bernardi
-Riccardo Antonelli
+- Francesco Bernardi
+- Riccardo Antonelli
 
 ## Server
 
-Stefano Benoni
+- Stefano Benoni
 
 ## Face Counter
 
-Matteo Coccapani
+- Matteo Coccapani
