@@ -4,7 +4,7 @@
 
 [NaoNexus Homepage](https://naonexus.altervista.org)
 
-## Video
+## Video
 
 - Francesco Albertini
 - Alberto Rubini
