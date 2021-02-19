@@ -28,7 +28,8 @@ def on_new_client(clientSocket, msg):
    
 # -- input
 s    = socket.socket()                                 # Create a socket object
-HOST = "192.168.0.107"                                     # Get local machine name
+#HOST = "192.168.0.107"                                 # Get local machine name
+HOST = "127.0.0.1"
 PORT = 5050                                            # Reserve a port for your service
 
 print("HOST:", HOST)
