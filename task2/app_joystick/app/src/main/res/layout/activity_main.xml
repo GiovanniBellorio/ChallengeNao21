@@ -7,83 +7,35 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/bttdestra"
+        android:id="@+id/bttSinistra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="293dp"
-        android:layout_marginLeft="293dp"
-        android:layout_marginTop="468dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="215dp"
-        android:text="DX"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="SINISTRA"
+        app:layout_constraintBottom_toBottomOf="@+id/bttReset"
+        app:layout_constraintEnd_toStartOf="@+id/bttReset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttsinistra"
+        android:id="@+id/buttDestra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="293dp"
-        android:layout_marginLeft="293dp"
-        android:layout_marginTop="526dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="157dp"
-        android:text="SX"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="DESTRA"
+        app:layout_constraintBottom_toBottomOf="@+id/bttReset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bttReset" />
 
     <Button
-        android:id="@+id/bttreset"
+        android:id="@+id/bttReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RESET"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
-
-    <Button
-        android:id="@+id/bttsu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="526dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
-        android:layout_marginBottom="157dp"
-        android:text="SU"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bttgiù"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="468dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
-        android:layout_marginBottom="215dp"
-        android:text="GIU"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UnknownId" />
+        app:layout_constraintTop_toBottomOf="@+id/switchGisoscopio" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -97,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giroscopio"
-        app:layout_constraintBottom_toTopOf="@+id/bttreset"
+        app:layout_constraintBottom_toTopOf="@+id/bttReset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,63 +64,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textZ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Z:"
-        app:layout_constraintBottom_toTopOf="@+id/switchGisoscopio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textY" />
+        app:layout_constraintTop_toBottomOf="@+id/textX" />
 
     <TextView
         android:id="@+id/textX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="X:"
-        app:layout_constraintBottom_toTopOf="@+id/textY"
+        app:layout_constraintBottom_toTopOf="@+id/switchGisoscopio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextIp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ip"
+        app:layout_constraintBottom_toTopOf="@+id/textX"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/invio"
+        android:id="@+id/bttConferma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="285dp"
-        android:layout_marginLeft="285dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="363dp"
-        android:text="SALVA"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="invio"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextIp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/testo_ip"
-        android:layout_width="239dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
-        android:layout_marginBottom="361dp"
-        android:layout_weight="200"
-        android:hint="Inserisci l'ip"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextIp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

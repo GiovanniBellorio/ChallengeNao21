@@ -2,7 +2,6 @@ package com.example.rotazionenao;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -11,13 +10,13 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import android.os.AsyncTask;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
-
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     private int[] rotationAngles = new int[2];
     private int[] rotationAnglesOld = new int[2];
 
-    public String ip = "";            // dichiaro 'indirizzo ip per mandate i dati
+    String ip  = ""; // dichiaro l'indirizzo ip per mandate i dati
 
     private SensorManager sensorManager;
     private Sensor rotation;
@@ -43,35 +42,29 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         Switch switchGyro = (Switch) findViewById(R.id.switchGisoscopio);
         switchGyro.setOnCheckedChangeListener(this);
 
+
         // MOVIMENTO TESTA
 
-        Button Invio = findViewById(R.id.invio);                        //BOTTONE CHE INVIA L'IP
-        TextInputEditText IP = findViewById(R.id.testo_ip);            //TESTO CHE CONTIENE L'IP
-        Button SINISTRA = findViewById(R.id.buttsinistra);
-        Button DESTRA = findViewById(R.id.bttdestra);
-        Button RESET = findViewById(R.id.bttreset);
-        Button SU = findViewById(R.id.bttsu);
-        Button GIU = findViewById(R.id.bttgiù);
+
+        Button DESTRA = findViewById(R.id.buttDestra);
+
+        Button SINISTRA = findViewById(R.id.bttSinistra);
+
+        Button RESET = findViewById(R.id.bttReset);
+
+        Button INVIO = findViewById(R.id.bttConferma);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         rotation = sensorManager.getDefaultSensor(TYPE_ROTATION_VECTOR);
 
-
-
-        Invio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {                           //VOID CHE CAMBIA L'IP
-
-                ip = IP.getText().toString();
-            }
-        });
+        // CONTROLLO CLICK DEI BOTTONI
 
 
         SINISTRA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 send_data("sx", ip);
-
+                Toast.makeText(getApplicationContext(), "sent sx on ip:" + ip , Toast.LENGTH_LONG).show();
             }
         });
 
@@ -80,34 +73,24 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             @Override
             public void onClick(View v) {
                 send_data("dx", ip);
-
+                Toast.makeText(getApplicationContext(), "sent dx on ip:" + ip , Toast.LENGTH_LONG).show();
             }
         });
-
-
-        SU.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                send_data("su", ip);
-
-            }
-        });
-
-
-        GIU.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                send_data("giu", ip);
-
-            }
-        });
-
 
         RESET.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 send_data("res", ip);
+                Toast.makeText(getApplicationContext(), "sent res on ip:" + ip , Toast.LENGTH_LONG).show();
+            }
+        });
 
+        INVIO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText textIp = findViewById(R.id.editTextIp);
+                ip = textIp.getText().toString();
+                Toast.makeText(getApplicationContext(), "ip set:" + ip , Toast.LENGTH_LONG).show();
             }
         });
 
@@ -117,25 +100,22 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked) {
             sensorManager.registerListener(this, rotation, SensorManager.SENSOR_DELAY_NORMAL);
-
         }
         else {
             sensorManager.unregisterListener(this);
-
         }
     }
 
-    //GYROSCOPE
+    // GYROSCOPE
     public void onSensorChanged(SensorEvent event) {
         TextView textX = (TextView) findViewById(R.id.textX);
         TextView textY = (TextView) findViewById(R.id.textY);
-        TextView textZ = (TextView) findViewById(R.id.textZ);
 
         rotationAngles[0] = Math.round(event.values[0] * 100);
         rotationAngles[1] = Math.round(event.values[2] * 100);
 
         if (rotationAngles[0] > rotationAnglesOld[0] + 2 || rotationAngles[0] < rotationAnglesOld[0] - 2 || rotationAngles[1] > rotationAnglesOld[1] + 2 || rotationAngles[1] < rotationAnglesOld[1] - 2) {
-            send_data(Integer.toString(rotationAngles[0]), ip);
+            send_data(Integer.toString(rotationAngles[1]), ip);
             rotationAnglesOld[0] = rotationAngles[0];
             rotationAnglesOld[1] = rotationAngles[1];
         }
@@ -152,11 +132,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     public void send_data(String message, String serverIp){
         BackgroundTask b1 = new BackgroundTask();
         b1.execute(message,serverIp);
-
     }
 
-    class BackgroundTask extends AsyncTask<String,Void,Void> {
-
+    class BackgroundTask extends AsyncTask<String,Void,Void>
+    {
         PrintWriter writer;
         Socket s;
         @Override
@@ -167,14 +146,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                 s = new Socket(serverIp,5050);
                 writer = new PrintWriter(s.getOutputStream());
                 writer.write(message+"_pho");
+                System.out.println(message);
                 writer.flush();
+                writer.close();
+                s.close();
             }catch (IOException e){
                 e.printStackTrace();
             }
             return null;
         }
     }
-
-
-
 }

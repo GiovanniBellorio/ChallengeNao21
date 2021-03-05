@@ -626,12 +626,12 @@ class MyClass(GeneratedClass):
 		GeneratedClass.__init__(self)
 
 	def onInput_onStart(self):
-		self.onStopped("Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella, un valente matematico e ingegnere idraulico veronese. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.")]]>
+		self.onStopped("Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.")]]>
                 </content>
               </script>
               <pluginContent>
                 <text>
-                  <![CDATA[Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella, un valente matematico e ingegnere idraulico veronese. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.]]>
+                  <![CDATA[Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.]]>
                 </text>
               </pluginContent>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
