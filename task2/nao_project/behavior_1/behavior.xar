@@ -268,12 +268,12 @@ class MyClass(GeneratedClass):
 		GeneratedClass.__init__(self)
 
 	def onInput_onStart(self):
-		self.onStopped("presentazione gipsoteca")]]>
+		self.onStopped("Lo scultore Ugo Zannoni nasce a Verona nel 1836. Incomincia la sua formazione nella città natale presso l’Accademia di Pittura e Scultura Cignaroli di Verona, per poi spostarsi alcuni anni dopo all’Accademia di Brera. Tra le sue opere più famose ricordiamo la statua del poeta Dante Alighieri.")]]>
                 </content>
               </script>
               <pluginContent>
                 <text>
-                  <![CDATA[presentazione gipsoteca]]>
+                  <![CDATA[Lo scultore Ugo Zannoni nasce a Verona nel 1836. Incomincia la sua formazione nella città natale presso l’Accademia di Pittura e Scultura Cignaroli di Verona, per poi spostarsi alcuni anni dopo all’Accademia di Brera. Tra le sue opere più famose ricordiamo la statua del poeta Dante Alighieri.]]>
                 </text>
               </pluginContent>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
@@ -433,7 +433,7 @@ class MyClass(GeneratedClass):
 
         while self.stop:
             sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sckt.connect(("192.168.0.100", 5050)) #192.168.0.107
+            sckt.connect(("192.168.0.101", 5050)) #192.168.0.107
             messagesend = "nao"
             sckt.sendall(messagesend.encode("utf-8"))
             # wait
@@ -616,7 +616,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (1)" id="12" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="692" y="413">
+            <Box name="Text Edit (1)" id="12" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="683" y="324">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -626,19 +626,19 @@ class MyClass(GeneratedClass):
 		GeneratedClass.__init__(self)
 
 	def onInput_onStart(self):
-		self.onStopped("opera 1")]]>
+		self.onStopped("Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella, un valente matematico e ingegnere idraulico veronese. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.")]]>
                 </content>
               </script>
               <pluginContent>
                 <text>
-                  <![CDATA[opera 1]]>
+                  <![CDATA[Questo modello venne realizzato nel 1888 da Zannoni per realizzare il monumento funebre ad Antonio Zanella, un valente matematico e ingegnere idraulico veronese. L’opera definitiva oggi si trova al cimitero monumentale di Verona e consiste in una semplice struttura architettonica costituita da uno zoccolo esagonale poggiato su di un ampio basamento, ornato da libri e corone di alloro in metallo. La bozza in gesso che stiamo ammirando delinea la particolare importanza che lo scultore attribuiva allo studio degli effetti materici, evidenziata dall’utilizzo di colori che simulano i materiali impiegati nella versione monumentale.]]>
                 </text>
               </pluginContent>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Text Edit (2)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="690" y="512">
+            <Box name="Text Edit (2)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="688" y="527">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -648,19 +648,19 @@ class MyClass(GeneratedClass):
 		GeneratedClass.__init__(self)
 
 	def onInput_onStart(self):
-		self.onStopped("opera 2")]]>
+		self.onStopped("Questo modello venne realizzato nel 1894 per realizzare il monumento funebre della famiglia Allegri Zorzi all’interno del cimitero monumentale di Verona. La struttura ad arca addossata ad un muro è un rimando alle numerose tombe presenti in città. Completano la scena due figure femminili e la figura Scipione Zorzi che giace defunto nel letto funebre.")]]>
                 </content>
               </script>
               <pluginContent>
                 <text>
-                  <![CDATA[opera 2]]>
+                  <![CDATA[Questo modello venne realizzato nel 1894 per realizzare il monumento funebre della famiglia Allegri Zorzi all’interno del cimitero monumentale di Verona. La struttura ad arca addossata ad un muro è un rimando alle numerose tombe presenti in città. Completano la scena due figure femminili e la figura Scipione Zorzi che giace defunto nel letto funebre.]]>
                 </text>
               </pluginContent>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Text Edit (3)" id="14" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="692" y="608">
+            <Box name="Text Edit (3)" id="14" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="698" y="682">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -670,12 +670,12 @@ class MyClass(GeneratedClass):
 		GeneratedClass.__init__(self)
 
 	def onInput_onStart(self):
-		self.onStopped("opera 3")]]>
+		self.onStopped("È una statua che rappresenta San Luigi Gonzaga. Proviene da Firenze ed è la copia della statua che si trova presso il santuario di Lourdes di Verona realizzata in marmo di Carrara. Probabilmente questa copia è stata commissionata per sostituire una statua che non si adattava alla nicchia per cui era stata commissionata.")]]>
                 </content>
               </script>
               <pluginContent>
                 <text>
-                  <![CDATA[opera 3]]>
+                  <![CDATA[È una statua che rappresenta San Luigi Gonzaga. Proviene da Firenze ed è la copia della statua che si trova presso il santuario di Lourdes di Verona realizzata in marmo di Carrara. Probabilmente questa copia è stata commissionata per sostituire una statua che non si adattava alla nicchia per cui era stata commissionata.]]>
                 </text>
               </pluginContent>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
