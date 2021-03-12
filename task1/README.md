@@ -5,15 +5,14 @@
 - Matteo Coccapani
  
  [NaoNexus Homepage](https://naonexus.altervista.org)
-
-## Video
 ### Canale YouTube:
  [NaoNexus Channel](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
 
+## Video presentazione squadra:
 #### Registi:
 - Francesco Albertini
 - Alberto Rubini
-#### Casting:
+#### Casting (in ordine di apparizione):
 - Francesco Albertini
 - Alberto Rubini
 - Riccardo Antonelli
@@ -23,3 +22,15 @@
 - Matteo Coccapani
 - Andrea Roberti
 - Giovanni Bellorio
+
+## Video Presentazione del progetto per la fase II: 
+#### Registi:
+- Francesco Albertini
+- Alberto Rubini
+#### Casting (in ordine di apparizione):
+- Stefano Marzocca
+- Matteo Coccapani
+- Riccardo Antonelli
+- Francesco Bernardi
+- Alberto Rubini
+- Francesco Albertini
