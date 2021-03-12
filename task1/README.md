@@ -2,7 +2,7 @@
 
 ## Sito web 
  [NaoNexus Homepage](https://naonexus.altervista.org)
-#### Autore:
+##### Autore:
 - Matteo Coccapani
 ### Canale YouTube
    [NaoNexus Channel](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
