@@ -13,6 +13,10 @@
    [NaoNexus linkedin page](https://www.linkedin.com/in/nao-nexus-95b929208/)
 
 ## Video presentazione squadra:
+
+Il team, composto di studenti delle classi 2°, 3°, 4° e 5° della sezione Scienze Applicate dell’istituto Alle Stimate, si compone di 8 partecipanti.
+</br>In questo video ciascuno dei membri riassume brevemente il suo ruolo nel team.</br>
+
 #### Registi:
 - Francesco Albertini
 - Alberto Rubini
@@ -26,8 +30,11 @@
 - Matteo Coccapani
 - Andrea Roberti
 - Giovanni Bellorio
+- Alessio Iliceto
 
 ## Video Presentazione del progetto per la fase II: 
+
+
 #### Registi:
 - Francesco Albertini
 - Alberto Rubini
