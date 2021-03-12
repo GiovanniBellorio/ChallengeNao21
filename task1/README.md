@@ -7,9 +7,15 @@
  [NaoNexus Homepage](https://naonexus.altervista.org)
 
 ## Video
-#### registi:
+#### Registi:
 - Francesco Albertini
 - Alberto Rubini
-#### casting:
+#### Casting:
 - Riccardo Antonelli
-- ...
+- Francesco Albertini
+- Francesco Bernardi
+- Stefano Marzocca
+- Stefano Benoni
+- Matteo Coccapani
+- Andrea Roberti
+- Giovanni Bellorio
