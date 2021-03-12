@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         // MOVIMENTO TESTA
 
+        Button PLAY = findViewById(R.id.bttPlay);
 
         Button DESTRA = findViewById(R.id.buttDestra);
 
@@ -58,6 +59,18 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         rotation = sensorManager.getDefaultSensor(TYPE_ROTATION_VECTOR);
 
         // CONTROLLO CLICK DEI BOTTONI
+
+
+        PLAY.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                send_data("pl", ip);
+                Toast.makeText(getApplicationContext(), "sent pl on ip:" + ip , Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
 
 
         SINISTRA.setOnClickListener(new View.OnClickListener() {
