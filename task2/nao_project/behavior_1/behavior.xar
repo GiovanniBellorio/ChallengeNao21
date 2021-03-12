@@ -292,6 +292,7 @@ class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
         self.yawAngle = 0
+        self.play = False
 
     def onLoad(self):
         #put initialization code here
@@ -314,15 +315,17 @@ class MyClass(GeneratedClass):
             pass
         elif (yawAngle == "su"):
             pass
+        elif (yawAngle == "pl"):
+            self.play = True
         else:
             # giroscopio
             tmp = -(int(yawAngle))
             if (tmp > -20 and tmp < 20):
-                self.yawAngle = 0.1
+                self.yawAngle = 0.0 #0.1
             if (tmp < -20):
-                self.yawAngle = -0.78
+                self.yawAngle = -0.88 #-0.78
             if (tmp > 20):
-                self.yawAngle = 0.98
+                self.yawAngle = 0.88 #0.98
 
         self.onInput_onStart()
 
@@ -344,13 +347,24 @@ class MyClass(GeneratedClass):
         self.logger.info(self.yawAngle)
 
         # output opera
+        """
         if (self.yawAngle == -0.88):
             self.opera(1)
         if (self.yawAngle == 0):
             self.opera(2)
         if (self.yawAngle == 0.88):
             self.opera(3)
+        """
+        if (self.play and self.yawAngle == -0.88):
+            self.opera(1)
 
+        if (self.play and self.yawAngle == 0.0):
+            self.opera(2)
+
+        if (self.play and self.yawAngle == 0.88):
+            self.opera(3)
+
+        self.play = False
         self.onStopped()
 
     def onInput_onStop(self):
@@ -433,7 +447,8 @@ class MyClass(GeneratedClass):
 
         while self.stop:
             sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sckt.connect(("192.168.0.101", 5050)) #192.168.0.107
+            sckt.connect(("192.168.43.75", 5050)) # home
+            #sckt.connect(("192.168.0.101", 5050)) # school
             messagesend = "nao"
             sckt.sendall(messagesend.encode("utf-8"))
             # wait
@@ -511,7 +526,7 @@ class MyClass(GeneratedClass):
               <Input name="yawAngle" type="2" type_size="1" nature="2" inner="0" tooltip="" id="4" />
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
             </Box>
-            <Box name="Switch Case" id="9" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="454" y="524">
+            <Box name="Switch Case" id="9" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="573" y="523">
               <bitmap>media/images/box/interaction/choice.png</bitmap>
               <script language="4">
                 <content>
@@ -525,11 +540,11 @@ class MyClass(GeneratedClass):
 
 	def onInput_onStart(self, p):
 		p = self.typeConversion(p)
-		if(p == self.typeConversion(1)):
+		if(p == self.typeConversion(68)):
 			self.output_1(p)
-		elif(p == self.typeConversion(2)):
+		elif(p == self.typeConversion(80)):
 			self.output_2(p)
-		elif(p == self.typeConversion(3)):
+		elif(p == self.typeConversion(114)):
 			self.output_3(p)
 		else:
 			self.onDefault()
@@ -547,9 +562,9 @@ class MyClass(GeneratedClass):
               </script>
               <pluginContent>
                 <keywords>
-                  <keyword>1</keyword>
-                  <keyword>2</keyword>
-                  <keyword>3</keyword>
+                  <keyword>68</keyword>
+                  <keyword>80</keyword>
+                  <keyword>114</keyword>
                   <keyword></keyword>
                 </keywords>
               </pluginContent>
@@ -560,7 +575,7 @@ class MyClass(GeneratedClass):
               <Output name="output_2" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="5" />
               <Output name="output_3" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="6" />
             </Box>
-            <Box name="Say Text (1)" id="11" localization="8" tooltip="Say the text received on its input." x="1004" y="494">
+            <Box name="Say Text (1)" id="11" localization="8" tooltip="Say the text received on its input." x="1119" y="496">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -616,7 +631,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (1)" id="12" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="683" y="324">
+            <Box name="Text Edit (1)" id="12" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="798" y="326">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -638,7 +653,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Text Edit (2)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="688" y="527">
+            <Box name="Text Edit (2)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="803" y="529">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -660,7 +675,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Text Edit (3)" id="14" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="698" y="682">
+            <Box name="Text Edit (3)" id="14" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="813" y="684">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -732,6 +747,109 @@ class MyClass(GeneratedClass):
               <Input name="yawAngle" type="2" type_size="1" nature="2" inner="0" tooltip="" id="4" />
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
             </Box>
+            <Box name="NAOMark" id="16" localization="8" tooltip="Detect NAOMark and return its ID number." x="435" y="518">
+              <bitmap>media/images/box/interaction/uramark.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+              <Input name="LandmarkDetected" type="0" type_size="1" nature="4" stm_value_name="LandmarkDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="4" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is stopped." id="5" />
+              <Output name="onMarkDetected" type="2" type_size="1" nature="2" inner="0" tooltip="ID number of the detected NAOmark." id="6" />
+              <Output name="onNoMark" type="1" type_size="1" nature="2" inner="0" tooltip="No NAOmark has been detected." id="7" />
+              <Timeline enable="0">
+                <BehaviorLayer name="behavior_layer1">
+                  <BehaviorKeyframe name="keyframe1" index="1">
+                    <Diagram>
+                      <Box name="Get Marks List" id="1" localization="8" tooltip="Extracts the list of detected marks (empty if no mark) from the naomarks detection&#x0A;extractor data." x="139" y="75">
+                        <bitmap>media/images/box/box-script.png</bitmap>
+                        <script language="4">
+                          <content>
+                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onUnload(self):
+        #puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self, p):
+        markIDs = []
+        # Generic Extractor output format:
+        # p = [ [timeStampMaj, timeStampMin], [ tag0, tag1, ... tagN] ] with tag = [ shapeInfo, moreInfo ]
+        if(len(p) > 0):
+            markInfoArray = p[1]
+            for markInfo in markInfoArray:
+                moreInfo = markInfo[1]
+                # moreInfo = [ landmarkID ]
+                markIDs.append(moreInfo[0])
+        self.onStopped(markIDs)]]>
+                          </content>
+                        </script>
+                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                        <Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input. It must be the&#x0A;LandmarkDetected extractor data." id="2" />
+                        <Output name="onStopped" type="0" type_size="1" nature="1" inner="0" tooltip="Extracted list of detected marks." id="3" />
+                      </Box>
+                      <Box name="ProcessMarksList" id="2" localization="8" tooltip="Process the list of detected marks to give the ID number of the first detected mark&#x0A;and notify when there is no mark detected.&#x0A;&#x0A;An output (either one or the other) is stimulated each time the first detected&#x0A;mark changes." x="293" y="84">
+                        <bitmap>media/images/box/interaction/uramark.png</bitmap>
+                        <script language="4">
+                          <content>
+                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.nNumLastDetected = -1
+
+    def onUnload(self):
+        #puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self, p):
+        if(len(p) == 0):
+            self.nNumLastDetected = -1
+            self.onNoMark()
+        else:
+            if(self.nNumLastDetected != p[0]):
+                #only stimulate output if a mark wasn't detected before !
+                self.nNumLastDetected = p[0]
+                self.onMarkDetected( self.nNumLastDetected )]]>
+                          </content>
+                        </script>
+                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                        <Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="The detected NAOmarks list." id="2" />
+                        <Output name="onMarkDetected" type="2" type_size="1" nature="1" inner="0" tooltip="Number of the detected NAOmark." id="3" />
+                        <Output name="onNoMark" type="1" type_size="1" nature="1" inner="0" tooltip="No NAOmark is detected." id="4" />
+                      </Box>
+                      <Link inputowner="0" indexofinput="7" outputowner="2" indexofoutput="4" />
+                      <Link inputowner="0" indexofinput="6" outputowner="2" indexofoutput="3" />
+                      <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="4" />
+                      <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="3" />
+                    </Diagram>
+                  </BehaviorKeyframe>
+                </BehaviorLayer>
+              </Timeline>
+            </Box>
             <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="3" />
             <Link inputowner="6" indexofinput="4" outputowner="8" indexofoutput="5" />
             <Link inputowner="2" indexofinput="4" outputowner="1" indexofoutput="6" />
@@ -744,13 +862,14 @@ class MyClass(GeneratedClass):
             <Link inputowner="11" indexofinput="2" outputowner="14" indexofoutput="3" />
             <Link inputowner="15" indexofinput="2" outputowner="2" indexofoutput="6" />
             <Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="5" />
-            <Link inputowner="9" indexofinput="2" outputowner="6" indexofoutput="6" />
             <Link inputowner="8" indexofinput="3" outputowner="8" indexofoutput="5" />
             <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="5" />
             <Link inputowner="8" indexofinput="3" outputowner="6" indexofoutput="6" />
             <Link inputowner="8" indexofinput="2" outputowner="11" indexofoutput="4" />
             <Link inputowner="8" indexofinput="2" outputowner="4" indexofoutput="4" />
             <Link inputowner="10" indexofinput="2" outputowner="0" indexofoutput="2" />
+            <Link inputowner="16" indexofinput="2" outputowner="6" indexofoutput="6" />
+            <Link inputowner="9" indexofinput="2" outputowner="16" indexofoutput="6" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
