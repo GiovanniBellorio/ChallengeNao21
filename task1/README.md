@@ -5,9 +5,10 @@
 - Matteo Coccapani
  
  [NaoNexus Homepage](https://naonexus.altervista.org)
-### Canale YouTube:
+### Canale YouTube
    [NaoNexus Channel](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
-
+### Instagram
+   [NaoNexus Instagram](https://www.instagram.com/naonexus/)
 ### Linkedin
    [NaoNexus linkedin page](https://www.linkedin.com/in/nao-nexus-95b929208/)
 
