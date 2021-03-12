@@ -11,8 +11,9 @@
 - Francesco Albertini
 - Alberto Rubini
 #### Casting:
-- Riccardo Antonelli
 - Francesco Albertini
+- Alberto Rubini
+- Riccardo Antonelli
 - Francesco Bernardi
 - Stefano Marzocca
 - Stefano Benoni
