@@ -33,7 +33,7 @@ Il team, composto di studenti delle classi 2°, 3°, 4° e 5° della sezione Sci
 
 ## Video Presentazione del progetto per la fase II: 
 
-In questo video alcuni membri del team NaoNexus illustrano il nostro progetto relativo all'utilizzo del nao per parlare delle opere presenti nella gipsoteca dell'istituto "Alle Stimate" di Verona
+In questo video alcuni membri del team NaoNexus illustrano il nostro progetto relativo all'utilizzo del nao per parlare delle opere presenti nella gipsoteca dell'istituto "Alle Stimate" di Verona. [Qui](https://naonexus.altervista.org/il-progetto/) una descrizione più dettagliata del progetto per la fase II.
 
 #### Registi:
 - Francesco Albertini
