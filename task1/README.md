@@ -7,6 +7,9 @@
  [NaoNexus Homepage](https://naonexus.altervista.org)
 
 ## Video
+### Canale YouTube:
+ [NaoNexus Channel](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
+
 #### Registi:
 - Francesco Albertini
 - Alberto Rubini
