@@ -447,8 +447,8 @@ class MyClass(GeneratedClass):
 
         while self.stop:
             sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sckt.connect(("192.168.43.75", 5050)) # home
-            #sckt.connect(("192.168.0.101", 5050)) # school
+            #sckt.connect(("192.168.43.75", 5050)) # home
+            sckt.connect(("192.168.0.101", 5050)) # school
             messagesend = "nao"
             sckt.sendall(messagesend.encode("utf-8"))
             # wait
@@ -1043,16 +1043,15 @@ class MyClass(GeneratedClass):
             <Link inputowner="11" indexofinput="2" outputowner="14" indexofoutput="3" />
             <Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="5" />
             <Link inputowner="8" indexofinput="3" outputowner="8" indexofoutput="5" />
-            <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="5" />
-            <Link inputowner="8" indexofinput="3" outputowner="6" indexofoutput="6" />
             <Link inputowner="8" indexofinput="2" outputowner="11" indexofoutput="4" />
             <Link inputowner="8" indexofinput="2" outputowner="4" indexofoutput="4" />
-            <Link inputowner="10" indexofinput="2" outputowner="0" indexofoutput="2" />
             <Link inputowner="16" indexofinput="2" outputowner="6" indexofoutput="6" />
             <Link inputowner="9" indexofinput="2" outputowner="16" indexofoutput="6" />
             <Link inputowner="2" indexofinput="4" outputowner="1" indexofoutput="6" />
             <Link inputowner="17" indexofinput="2" outputowner="10" indexofoutput="5" />
             <Link inputowner="15" indexofinput="2" outputowner="17" indexofoutput="3" />
+            <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="5" />
+            <Link inputowner="8" indexofinput="3" outputowner="6" indexofoutput="6" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
