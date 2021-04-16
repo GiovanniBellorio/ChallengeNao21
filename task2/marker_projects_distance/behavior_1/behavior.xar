@@ -28,7 +28,7 @@ class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
         self.markInfoArray = []
-        self.diameter = 0.2
+        self.diameter = 0.07
         self.distance = 1
 
     def onLoad(self):
@@ -44,8 +44,9 @@ class MyClass(GeneratedClass):
         markerdict = {}
         count=0
 
+
         for markers in self.markInfoArray:
-            markerdict[count] = self.distance_calc(markers[4]), markers[1]
+            markerdict[count] = self.distance_calc(markers[0][4]), markers[0][1]
             count+=1
 
         comb = combinations(markerdict,2)
@@ -97,7 +98,11 @@ class MyClass(GeneratedClass):
             self.markInfoArray = val[1]
 
             try:
-                self.check()
+                if len(self.markInfoArray) > 1:
+                    self.check()
+                else:
+                    self.onUnload()
+                    self.corretta()
             except Exception, e:
                 self.logger.info("Landmarks detected, but it seems getData is invalid. ALValue =")
                 self.logger.info(val)
