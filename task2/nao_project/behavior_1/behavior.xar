@@ -438,7 +438,7 @@ class MyClass(GeneratedClass):
         while self.stop:
             sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             #sckt.connect(("192.168.43.75", 5050)) # home
-            sckt.connect(("192.168.0.101", 5050)) # school
+            sckt.connect(("192.168.0.100", 5050)) # school
             messagesend = "nao"
             sckt.sendall(messagesend.encode("utf-8"))
             # wait
