@@ -28,8 +28,8 @@ class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
         self.markInfoArray = []
-        self.diameter = 0.07
-        self.distance = 1
+        self.diameter      = 0.093      # diametro mark in metri
+        self.distance      = 1          # distanza legale tra persone in metri
 
     def onLoad(self):
         #put initialization code here
@@ -40,14 +40,14 @@ class MyClass(GeneratedClass):
         pass
 
     def check(self):
-        distances  = []
-        markerdict = {}
-        count=0
-
+        distances   = []
+        markerdict  = {}
+        count       = 0
 
         for markers in self.markInfoArray:
             markerdict[count] = self.distance_calc(markers[0][4]), markers[0][1]
-            count+=1
+            self.logger.info("dict: " + str(markerdict[count]))
+            count += 1
 
         comb = combinations(markerdict,2)
 
@@ -56,25 +56,24 @@ class MyClass(GeneratedClass):
             c = markerdict[dati[1]][1]
             g = markerdict[dati[0]][0]
             p = markerdict[dati[1]][0]
-            a = abs(b-c)
-            distances.append(sqrt((p-g*cos(a))**2+g**2-(g*cos(a))**2))
+            a = abs(b - c)
+            distances.append(sqrt((p - g * cos(a))**2 + g**2 - (g * cos(a))**2))
 
-        self.logger.info(distances)
+        self.logger.info("distanza: " + str(distances))
 
-        if all(dist >= self.distance for dist in distances):
-            self.onUnload()
-            self.corretta()
-        else:
-            self.onUnload()
-            self.allontanarsi
+        for dist in distances:
+            if (dist >= self.distance):
+                self.corretta()
+            else:
+                self.allontanarsi()
 
     def distance_calc(self, angle):
         return self.diameter/(2*tan(angle/2))
 
     def onInput_onStart(self):
-         #self.onStopped() #activate the output of the box
+        #self.onStopped() #activate the output of the box
         markProxy = ALProxy("ALLandMarkDetection")
-        # data = markProxy.getData("LandmarkDetected")
+        #data = markProxy.getData("LandmarkDetected")
         period = 500
         markProxy.subscribe("Test_LandMark", period, 0.0 )
         try:
@@ -101,22 +100,19 @@ class MyClass(GeneratedClass):
                 if len(self.markInfoArray) > 1:
                     self.check()
                 else:
-                    self.onUnload()
                     self.corretta()
             except Exception, e:
                 self.logger.info("Landmarks detected, but it seems getData is invalid. ALValue =")
                 self.logger.info(val)
                 self.logger.info("Error msg %s" % (str(e)))
-                #self.onInput_onStart()
         else:
             print "Error with getData. ALValue = %s" % (str(val))
-            #self.onInput_onStart()
 
         pass
 
     def onInput_onStop(self):
-        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
-        self.corretta() #activate the output of the box]]>
+        self.onUnload() # it is recommended to reuse the clean-up as the box is stopped
+        self.corretta() # activate the output of the box]]>
                 </content>
               </script>
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
@@ -125,7 +121,7 @@ class MyClass(GeneratedClass):
               <Output name="corretta" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
               <Output name="allontanarsi" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
             </Box>
-            <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="688" y="335">
+            <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="687" y="353">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
