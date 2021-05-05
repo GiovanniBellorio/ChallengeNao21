@@ -7,10 +7,10 @@
 
 ## Programmazione Choreographe
 
--Riccardo Antonelli
--Francesco Bernardi
--Stefano Benoni
--Stefano Marzocca 
+- Riccardo Antonelli
+- Francesco Bernardi
+- Stefano Benoni
+- Stefano Marzocca 
 
 
 ## Server
