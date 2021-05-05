@@ -5,6 +5,14 @@
 - Francesco Bernardi
 - Riccardo Antonelli
 
+## Programmazione Choreographe
+
+-Riccardo Antonelli
+-Francesco Bernardi
+-Stefano Benoni
+-Stefano Marzocca 
+
+
 ## Server
 
 - Stefano Benoni
