@@ -14,8 +14,8 @@
     <Timeline enable="0">
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
-          <Diagram scale="84.0896">
-            <Box name="rec_android" id="8" localization="8" tooltip="receive Data from Android" x="1197" y="985">
+          <Diagram scale="70.7107">
+            <Box name="rec_android" id="8" localization="8" tooltip="receive Data from Android" x="2360" y="1070">
               <bitmap>media/images/box/box-python-script.png</bitmap>
               <script language="4">
                 <content>
@@ -46,7 +46,7 @@ class MyClass(GeneratedClass):
         while self.stop:
             sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             #sckt.connect(("192.168.43.75", 5050)) # home
-            sckt.connect(("192.168.0.105", 5050)) # school
+            sckt.connect(("192.168.0.100", 5050)) # school
             messagesend = "nao"
             sckt.sendall(messagesend.encode("utf-8"))
             # wait
@@ -74,7 +74,7 @@ class MyClass(GeneratedClass):
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
               <Output name="out_yawAngle" type="2" type_size="1" nature="2" inner="0" tooltip="yaw Angle from android" id="5" />
             </Box>
-            <Box name="Studente" id="1" localization="8" tooltip="" x="1383" y="988">
+            <Box name="Studente" id="1" localization="8" tooltip="" x="2546" y="1073">
               <bitmap>media/images/box/box-python-script.png</bitmap>
               <script language="4">
                 <content>
@@ -91,17 +91,13 @@ class MyClass(GeneratedClass):
         pass
 
     def onInput_data(self,data):
-        #self.onStopped() #activate the output of the box
-        Class={
-        1 : "Lino",
-        2 : "Benedetto",
-        3 : "Felice",
-        4 : "Dal Seno Bruno",
-        5 : "La Banca Benedetto",
-        #5 : "Bo Lino"
-}
+        #self.onStopped()
 
-        self.dataOut(Class[data])
+        #activate the output of the box
+        #Class = {1 : "Lino", 2 : "Benedetto", 3 : "Felice", 4 : "Dal Seno Bruno", 5 : "La Banca Benedetto"}
+
+        #self.dataOut(Class[int(data)])
+        self.dataOut(int(data))
 
 
         pass
@@ -117,7 +113,7 @@ class MyClass(GeneratedClass):
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
               <Output name="dataOut" type="3" type_size="1" nature="2" inner="0" tooltip="" id="5" />
             </Box>
-            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="2134" y="1370">
+            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="3297" y="1455">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -260,7 +256,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="NAOMark" id="16" localization="8" tooltip="Detect NAOMark and return its ID number." x="353" y="580">
+            <Box name="NAOMark" id="16" localization="8" tooltip="Detect NAOMark and return its ID number." x="1516" y="665">
               <bitmap>media/images/box/interaction/uramark.png</bitmap>
               <script language="4">
                 <content>
@@ -363,7 +359,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Say Text (3)" id="9" localization="8" tooltip="Say the text received on its input." x="1101" y="132">
+            <Box name="Say Text (3)" id="9" localization="8" tooltip="Say the text received on its input." x="110" y="307">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -419,7 +415,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit" id="10" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1700" y="1016">
+            <Box name="Text Edit" id="10" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2863" y="1101">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -441,7 +437,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="1387" y="1249">
+            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="2550" y="1334">
               <bitmap>media/images/box/interaction/choice.png</bitmap>
               <script language="4">
                 <content>
@@ -498,7 +494,7 @@ class MyClass(GeneratedClass):
               <Output name="output_4" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="7" />
               <Output name="output_5" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="8" />
             </Box>
-            <Box name="Text Edit (1)" id="3" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1708" y="1178">
+            <Box name="Text Edit (1)" id="3" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2871" y="1263">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -520,7 +516,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Text Edit (2)" id="5" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1712" y="1356">
+            <Box name="Text Edit (2)" id="5" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2875" y="1441">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -542,7 +538,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Speech Reco." id="11" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="568" y="127">
+            <Box name="Speech Reco." id="11" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="1145" y="71">
               <bitmap>media/images/box/interaction/ear.png</bitmap>
               <script language="4">
                 <content>
@@ -625,7 +621,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Enable word spotting" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="If this option is not activated the robot will only understand exact expressions. If it is, he will spot the exact expressions even in the middle of a sentence.&#x0A;&#x0A;!!Warning!! This option is only available with the speech recognition module using Nuance (ie in Atom version of the robot)." id="9" />
               <Resource name="Speech recognition" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (5)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="738" y="128">
+            <Box name="Text Edit (5)" id="13" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1315" y="72">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -647,7 +643,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Speech Reco. (1)" id="14" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="1278" y="212">
+            <Box name="Speech Reco. (1)" id="14" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="2532" y="266">
               <bitmap>media/images/box/interaction/ear.png</bitmap>
               <script language="4">
                 <content>
@@ -730,7 +726,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Enable word spotting" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="If this option is not activated the robot will only understand exact expressions. If it is, he will spot the exact expressions even in the middle of a sentence.&#x0A;&#x0A;!!Warning!! This option is only available with the speech recognition module using Nuance (ie in Atom version of the robot)." id="9" />
               <Resource name="Speech recognition" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (6)" id="17" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1418" y="419">
+            <Box name="Text Edit (6)" id="17" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2581" y="504">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -752,7 +748,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text" id="18" localization="8" tooltip="Say the text received on its input." x="1693" y="449">
+            <Box name="Say Text" id="18" localization="8" tooltip="Say the text received on its input." x="2856" y="534">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -808,7 +804,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (7)" id="19" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="584" y="571">
+            <Box name="Text Edit (7)" id="19" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1747" y="656">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -830,7 +826,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (1)" id="20" localization="8" tooltip="Say the text received on its input." x="956" y="553">
+            <Box name="Say Text (1)" id="20" localization="8" tooltip="Say the text received on its input." x="2047" y="643">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -886,7 +882,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Delay" id="21" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="374" y="1734">
+            <Box name="Delay" id="21" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="1806" y="2004">
               <bitmap>media/images/box/wait.png</bitmap>
               <script language="4">
                 <content>
@@ -934,7 +930,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
               <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently delaying at least one signal and cancelled, output will be stimulated." id="6" />
             </Box>
-            <Box name="Text Edit (8)" id="22" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2364" y="1388">
+            <Box name="Text Edit (8)" id="22" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="3527" y="1473">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -956,7 +952,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (2)" id="23" localization="8" tooltip="Say the text received on its input." x="2665" y="1388">
+            <Box name="Say Text (2)" id="23" localization="8" tooltip="Say the text received on its input." x="3828" y="1473">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1012,7 +1008,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Tactile Head (1)" id="24" localization="8" tooltip="Detect touch on head tactile sensor." x="1200" y="1637">
+            <Box name="Tactile Head (1)" id="24" localization="8" tooltip="Detect touch on head tactile sensor." x="2632" y="1907">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -1155,7 +1151,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (9)" id="25" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1444" y="1659">
+            <Box name="Text Edit (9)" id="25" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2876" y="1929">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -1177,7 +1173,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (4)" id="26" localization="8" tooltip="Say the text received on its input." x="1778" y="1647">
+            <Box name="Say Text (4)" id="26" localization="8" tooltip="Say the text received on its input." x="3210" y="1917">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1233,7 +1229,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Tactile Head (2)" id="27" localization="8" tooltip="Detect touch on head tactile sensor." x="1071" y="1919">
+            <Box name="Tactile Head (2)" id="27" localization="8" tooltip="Detect touch on head tactile sensor." x="2503" y="2189">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -1376,7 +1372,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (10)" id="28" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1315" y="1941">
+            <Box name="Text Edit (10)" id="28" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2747" y="2211">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -1398,7 +1394,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (5)" id="29" localization="8" tooltip="Say the text received on its input." x="1649" y="1929">
+            <Box name="Say Text (5)" id="29" localization="8" tooltip="Say the text received on its input." x="3081" y="2199">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1454,7 +1450,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Tactile Head (3)" id="30" localization="8" tooltip="Detect touch on head tactile sensor." x="2006" y="1677">
+            <Box name="Tactile Head (3)" id="30" localization="8" tooltip="Detect touch on head tactile sensor." x="3438" y="1947">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -1597,7 +1593,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (11)" id="31" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2250" y="1699">
+            <Box name="Text Edit (11)" id="31" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="3682" y="1969">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -1619,7 +1615,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (6)" id="32" localization="8" tooltip="Say the text received on its input." x="2584" y="1687">
+            <Box name="Say Text (6)" id="32" localization="8" tooltip="Say the text received on its input." x="4016" y="1957">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1675,7 +1671,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Tactile Head (4)" id="6" localization="8" tooltip="Detect touch on head tactile sensor." x="1177" y="643">
+            <Box name="Tactile Head (4)" id="6" localization="8" tooltip="Detect touch on head tactile sensor." x="2627" y="717">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -1818,7 +1814,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (3)" id="7" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1407" y="661">
+            <Box name="Text Edit (3)" id="7" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2857" y="735">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -1840,7 +1836,7 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (7)" id="33" localization="8" tooltip="Say the text received on its input." x="1735" y="661">
+            <Box name="Say Text (7)" id="33" localization="8" tooltip="Say the text received on its input." x="3185" y="735">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1896,7 +1892,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Tactile Head (5)" id="34" localization="8" tooltip="Detect touch on head tactile sensor." x="381" y="967">
+            <Box name="Tactile Head (5)" id="34" localization="8" tooltip="Detect touch on head tactile sensor." x="775" y="871">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -2039,7 +2035,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Text Edit (4)" id="35" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="611" y="985">
+            <Box name="Text Edit (4)" id="35" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="419" y="1069">
               <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
               <script language="4">
                 <content>
@@ -2061,7 +2057,1735 @@ class MyClass(GeneratedClass):
               <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
               <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
             </Box>
-            <Box name="Say Text (8)" id="36" localization="8" tooltip="Say the text received on its input." x="912" y="985">
+            <Box name="Say Text (8)" id="36" localization="8" tooltip="Say the text received on its input." x="750" y="1041">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (12)" id="12" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="66" y="83">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Bene, adesso vediamo di corregere i compiti che avevate per questa estate. Allora LaBanca Benedetto, il campo magnetico che genera il filo uno nell\'esercizio uno, com\'è messo?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Bene, adesso vediamo di corregere i compiti che avevate per questa estate. Allora LaBanca Benedetto, il campo magnetico che genera il filo uno nell'esercizio uno, com'è messo?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (9)" id="15" localization="8" tooltip="Say the text received on its input." x="468" y="95">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (13)" id="37" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="664" y="80">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Assente LaBanca Benedetto? Ok. Eeeeee, vediamo chi chia")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Assente LaBanca Benedetto? Ok. Eeeeee, vediamo chi chia]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (10)" id="38" localization="8" tooltip="Say the text received on its input." x="974" y="74">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (14)" id="39" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1260" y="296">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Dal Seno Bruno, vuoi rispondere tu alla domanda?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Dal Seno Bruno, vuoi rispondere tu alla domanda?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (15)" id="40" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2098" y="266">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Cosa ho detto?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Cosa ho detto?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (16)" id="41" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="856" y="306">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Allora perchè non sai cosa ti ho chiesto?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Allora perchè non sai cosa ti ho chiesto?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (17)" id="42" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="339" y="315">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Non andava il microfono e non andava neanche la cassa allora LaBanca.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Non andava il microfono e non andava neanche la cassa allora LaBanca.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (18)" id="43" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1679" y="278">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Dal Seno? ")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Dal Seno? ]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (11)" id="44" localization="8" tooltip="Say the text received on its input." x="668" y="301">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (12)" id="45" localization="8" tooltip="Say the text received on its input." x="1133" y="300">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (13)" id="46" localization="8" tooltip="Say the text received on its input." x="1526" y="289">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (14)" id="47" localization="8" tooltip="Say the text received on its input." x="1955" y="266">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (15)" id="48" localization="8" tooltip="Say the text received on its input." x="2384" y="258">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (19)" id="49" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2208" y="674">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Si.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Si.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (16)" id="50" localization="8" tooltip="Say the text received on its input." x="2479" y="705">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (20)" id="51" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="3340" y="738">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Sarà oggetto di verifica, ragazzi!")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Sarà oggetto di verifica, ragazzi!]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (17)" id="52" localization="8" tooltip="Say the text received on its input." x="580" y="857">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (21)" id="53" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="972" y="1054">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("okay, beh, vedete voi. Se ci sono problemi alzate la manina, siete in quinta, in quinta superiore, credo che siate in grado di alzare la manina. Avente anche cinque dita.Pensate che io ne ho tre e sono in grado.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[okay, beh, vedete voi. Se ci sono problemi alzate la manina, siete in quinta, in quinta superiore, credo che siate in grado di alzare la manina. Avente anche cinque dita.Pensate che io ne ho tre e sono in grado.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (22)" id="54" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="968" y="1388">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Sei in viaggio?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Sei in viaggio?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (23)" id="55" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1538" y="1320">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Natale. Sei in giro? Hmm. Vabbè. Allora a chi era stato assegnato l\'esercizio di informatica?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Natale. Sei in giro? Hmm. Vabbè. Allora a chi era stato assegnato l'esercizio di informatica?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (24)" id="56" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="960" y="1212">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Era, dove sei?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Era, dove sei?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (25)" id="57" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1530" y="1040">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Oppure di gioia?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Oppure di gioia?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (26)" id="58" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2038" y="1328">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Ok, chiedo. Cosa mancava per coompletare le tabelle.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Ok, chiedo. Cosa mancava per coompletare le tabelle.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Text Edit (27)" id="59" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1526" y="1180">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("è partita la musica a te?")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[è partita la musica a te?]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (18)" id="60" localization="8" tooltip="Say the text received on its input." x="1236" y="1044">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (19)" id="61" localization="8" tooltip="Say the text received on its input." x="1204" y="1202">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (20)" id="62" localization="8" tooltip="Say the text received on its input." x="1216" y="1376">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (21)" id="63" localization="8" tooltip="Say the text received on its input." x="2090" y="1202">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (22)" id="64" localization="8" tooltip="Say the text received on its input." x="1808" y="1312">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (23)" id="65" localization="8" tooltip="Say the text received on its input." x="1808" y="1174">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (24)" id="66" localization="8" tooltip="Say the text received on its input." x="1822" y="1026">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (28)" id="67" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="3397" y="1050">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Cosa non ti fa più aprire, mettere il soggetto davanti alle frasi r.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Cosa non ti fa più aprire, mettere il soggetto davanti alle frasi r.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (25)" id="68" localization="8" tooltip="Say the text received on its input." x="3662" y="1077">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (29)" id="69" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="1850" y="1689">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("E posso dire anche che questo non aiuta la preparazione del vostro esame, che, ente, sicuramente, anche andasse male, male, male, come l\'anno scorso, saarà fatto in presenza e in presenza non avete a disposizione tutti gli strumenti con cui mi state facendo saltare i sonar.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[E posso dire anche che questo non aiuta la preparazione del vostro esame, che, ente, sicuramente, anche andasse male, male, male, come l'anno scorso, saarà fatto in presenza e in presenza non avete a disposizione tutti gli strumenti con cui mi state facendo saltare i sonar.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (26)" id="70" localization="8" tooltip="Say the text received on its input." x="2142" y="1675">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (30)" id="71" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="2599" y="1689">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Guarda.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Guarda.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (27)" id="72" localization="8" tooltip="Say the text received on its input." x="2891" y="1675">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Text Edit (31)" id="73" localization="8" tooltip="Send the text you entered when the input is stimulated." plugin="textedit_plugin" x="3137" y="1685">
+              <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("Vabbè, adesso vedo lo schermo tutto nero. Non vedo neanche le vostre inziali. Quindi direi che la lezione finisce qui! Vi saluto, con amarezza, ma vi saluto.")]]>
+                </content>
+              </script>
+              <pluginContent>
+                <text>
+                  <![CDATA[Vabbè, adesso vedo lo schermo tutto nero. Non vedo neanche le vostre inziali. Quindi direi che la lezione finisce qui! Vi saluto, con amarezza, ma vi saluto.]]>
+                </text>
+              </pluginContent>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the text on the output." id="2" />
+              <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The text you entered." id="3" />
+            </Box>
+            <Box name="Say Text (28)" id="74" localization="8" tooltip="Say the text received on its input." x="3429" y="1671">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (29)" id="75" localization="8" tooltip="Say the text received on its input." x="3196" y="1059">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (30)" id="76" localization="8" tooltip="Say the text received on its input." x="3166" y="1272">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Say Text (31)" id="77" localization="8" tooltip="Say the text received on its input." x="3141" y="1409">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -2123,7 +3847,6 @@ class MyClass(GeneratedClass):
             <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="5" />
             <Link inputowner="5" indexofinput="2" outputowner="2" indexofoutput="6" />
             <Link inputowner="9" indexofinput="2" outputowner="13" indexofoutput="3" />
-            <Link inputowner="14" indexofinput="2" outputowner="9" indexofoutput="4" />
             <Link inputowner="18" indexofinput="2" outputowner="17" indexofoutput="3" />
             <Link inputowner="16" indexofinput="2" outputowner="18" indexofoutput="4" />
             <Link inputowner="19" indexofinput="2" outputowner="16" indexofoutput="6" />
@@ -2137,7 +3860,6 @@ class MyClass(GeneratedClass):
             <Link inputowner="25" indexofinput="2" outputowner="24" indexofoutput="9" />
             <Link inputowner="25" indexofinput="2" outputowner="24" indexofoutput="8" />
             <Link inputowner="26" indexofinput="2" outputowner="25" indexofoutput="3" />
-            <Link inputowner="24" indexofinput="2" outputowner="23" indexofoutput="4" />
             <Link inputowner="28" indexofinput="2" outputowner="27" indexofoutput="10" />
             <Link inputowner="28" indexofinput="2" outputowner="27" indexofoutput="9" />
             <Link inputowner="28" indexofinput="2" outputowner="27" indexofoutput="8" />
@@ -2156,13 +3878,7 @@ class MyClass(GeneratedClass):
             <Link inputowner="35" indexofinput="2" outputowner="34" indexofoutput="9" />
             <Link inputowner="35" indexofinput="2" outputowner="34" indexofoutput="8" />
             <Link inputowner="36" indexofinput="2" outputowner="35" indexofoutput="3" />
-            <Link inputowner="6" indexofinput="2" outputowner="20" indexofoutput="4" />
-            <Link inputowner="34" indexofinput="2" outputowner="33" indexofoutput="4" />
-            <Link inputowner="8" indexofinput="2" outputowner="36" indexofoutput="4" />
             <Link inputowner="8" indexofinput="3" outputowner="8" indexofoutput="5" />
-            <Link inputowner="8" indexofinput="2" outputowner="10" indexofoutput="3" />
-            <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="3" />
-            <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="3" />
             <Link inputowner="13" indexofinput="2" outputowner="11" indexofoutput="5" />
             <Link inputowner="17" indexofinput="2" outputowner="14" indexofoutput="5" />
             <Link inputowner="11" indexofinput="3" outputowner="11" indexofoutput="5" />
@@ -2186,6 +3902,57 @@ class MyClass(GeneratedClass):
             <Link inputowner="27" indexofinput="3" outputowner="27" indexofoutput="9" />
             <Link inputowner="27" indexofinput="3" outputowner="27" indexofoutput="10" />
             <Link inputowner="0" indexofinput="4" outputowner="29" indexofoutput="4" />
+            <Link inputowner="15" indexofinput="2" outputowner="12" indexofoutput="3" />
+            <Link inputowner="11" indexofinput="2" outputowner="38" indexofoutput="4" />
+            <Link inputowner="38" indexofinput="2" outputowner="37" indexofoutput="3" />
+            <Link inputowner="37" indexofinput="2" outputowner="15" indexofoutput="4" />
+            <Link inputowner="42" indexofinput="2" outputowner="9" indexofoutput="4" />
+            <Link inputowner="44" indexofinput="2" outputowner="42" indexofoutput="3" />
+            <Link inputowner="41" indexofinput="2" outputowner="44" indexofoutput="4" />
+            <Link inputowner="45" indexofinput="2" outputowner="41" indexofoutput="3" />
+            <Link inputowner="39" indexofinput="2" outputowner="45" indexofoutput="4" />
+            <Link inputowner="46" indexofinput="2" outputowner="39" indexofoutput="3" />
+            <Link inputowner="43" indexofinput="2" outputowner="46" indexofoutput="4" />
+            <Link inputowner="47" indexofinput="2" outputowner="43" indexofoutput="3" />
+            <Link inputowner="40" indexofinput="2" outputowner="47" indexofoutput="4" />
+            <Link inputowner="14" indexofinput="2" outputowner="48" indexofoutput="4" />
+            <Link inputowner="48" indexofinput="2" outputowner="40" indexofoutput="3" />
+            <Link inputowner="49" indexofinput="2" outputowner="20" indexofoutput="4" />
+            <Link inputowner="6" indexofinput="2" outputowner="50" indexofoutput="4" />
+            <Link inputowner="50" indexofinput="2" outputowner="49" indexofoutput="3" />
+            <Link inputowner="51" indexofinput="2" outputowner="33" indexofoutput="4" />
+            <Link inputowner="34" indexofinput="2" outputowner="52" indexofoutput="4" />
+            <Link inputowner="52" indexofinput="2" outputowner="51" indexofoutput="3" />
+            <Link inputowner="53" indexofinput="2" outputowner="36" indexofoutput="4" />
+            <Link inputowner="60" indexofinput="2" outputowner="53" indexofoutput="3" />
+            <Link inputowner="56" indexofinput="2" outputowner="60" indexofoutput="4" />
+            <Link inputowner="61" indexofinput="2" outputowner="56" indexofoutput="3" />
+            <Link inputowner="54" indexofinput="2" outputowner="61" indexofoutput="4" />
+            <Link inputowner="62" indexofinput="2" outputowner="54" indexofoutput="3" />
+            <Link inputowner="57" indexofinput="2" outputowner="62" indexofoutput="4" />
+            <Link inputowner="66" indexofinput="2" outputowner="57" indexofoutput="3" />
+            <Link inputowner="59" indexofinput="2" outputowner="66" indexofoutput="4" />
+            <Link inputowner="65" indexofinput="2" outputowner="59" indexofoutput="3" />
+            <Link inputowner="55" indexofinput="2" outputowner="65" indexofoutput="4" />
+            <Link inputowner="64" indexofinput="2" outputowner="55" indexofoutput="3" />
+            <Link inputowner="58" indexofinput="2" outputowner="64" indexofoutput="4" />
+            <Link inputowner="63" indexofinput="2" outputowner="58" indexofoutput="3" />
+            <Link inputowner="8" indexofinput="2" outputowner="63" indexofoutput="4" />
+            <Link inputowner="68" indexofinput="2" outputowner="67" indexofoutput="3" />
+            <Link inputowner="8" indexofinput="2" outputowner="68" indexofoutput="4" />
+            <Link inputowner="70" indexofinput="2" outputowner="69" indexofoutput="3" />
+            <Link inputowner="72" indexofinput="2" outputowner="71" indexofoutput="3" />
+            <Link inputowner="74" indexofinput="2" outputowner="73" indexofoutput="3" />
+            <Link inputowner="69" indexofinput="2" outputowner="23" indexofoutput="4" />
+            <Link inputowner="71" indexofinput="2" outputowner="70" indexofoutput="4" />
+            <Link inputowner="73" indexofinput="2" outputowner="72" indexofoutput="4" />
+            <Link inputowner="24" indexofinput="2" outputowner="74" indexofoutput="4" />
+            <Link inputowner="75" indexofinput="2" outputowner="10" indexofoutput="3" />
+            <Link inputowner="67" indexofinput="2" outputowner="75" indexofoutput="4" />
+            <Link inputowner="76" indexofinput="2" outputowner="3" indexofoutput="3" />
+            <Link inputowner="8" indexofinput="2" outputowner="76" indexofoutput="4" />
+            <Link inputowner="77" indexofinput="2" outputowner="5" indexofoutput="3" />
+            <Link inputowner="4" indexofinput="2" outputowner="77" indexofoutput="4" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
