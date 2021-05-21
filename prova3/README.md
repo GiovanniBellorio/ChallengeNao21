@@ -8,7 +8,8 @@ si compone di 8 partecipanti, i quali si sono impegnati nel creare una rappresen
 ## Soggetto 
 
 Una rappresentazione teatrale di breve durata con il NAO che ha qui la funzione di insegnante,
-il quale, andando ad interagire con gli studenti, inevitabilmente dà vita a “gaffe” tipiche delle lezioni online. </br> 
+il quale, andando ad interagire con gli studenti, inevitabilmente dà vita a “gaffe” tipiche delle lezioni online.
+
 
 
 ## Découpage tecnico 
