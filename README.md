@@ -23,13 +23,13 @@
 * [Video Presentazione Team]()
 * [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
 
-### Social
+#### Social
 
 * [Instagram](https://www.instagram.com/naonexus/)
 * [LinkedIn](https://www.linkedin.com/in/nao-nexus-95b929208/)
 * [YouTube](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
 
-### Documenti
+#### Documenti
 
 * [Sito Web](https://naonexus.altervista.org/)
 * [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/slide/SitoWeb_NaoNexus.pdf)
@@ -40,7 +40,7 @@
 
 * [Video dimostrativo del progetto]()
 
-### Codice
+#### Codice
 
 * [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/nao_project_zip)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/app_joystick/app/src)
@@ -52,7 +52,7 @@
 * [Video spettacolo]()
 * [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
 
-### Codice
+#### Codice
 
 * [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3/studenti)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3/app_bottonistudenti)
