@@ -1,4 +1,4 @@
-# TASK 3
+# PROVA 3
 
 ## Sito web 
  [NaoNexus Homepage](https://naonexus.altervista.org)
@@ -26,37 +26,27 @@ il quale, andando ad interagire con gli studenti, inevitabilmente dà vita a “
 
 Découpage tecnico 
 
-Durata: circa 5 minuti 
-
-Attori: otto attori e il robot NAO (con funzione di insegnante) 
-
-Spazio: schermata su canale zoom 
-
-Materiale: canale zoom.  
+* Durata: circa 5 minuti 
+* Attori: otto attori e il robot NAO (con funzione di insegnante) 
+* Spazio: schermata su canale zoom 
+* Materiale: canale zoom.  
 
 
 Direttori di scena: 
 
-Professore Andrea Roberti 
-
-Professore Giovanni Bellorio  
+* Prof. Giovanni Bellorio  
 
 
 Scenografo: 
 
-Alessio Iliceto 
+* Alessio Iliceto 
 
 
 Personaggi e interpreti in ordine di apparizione: 
 
-Francesco Bernardi (Interpreta: La Banca Benedetto) 
-
-Stefano Marzocca (Interpreta: Dal Seno Bruno) 
-
-Alessio Iliceto (Interpreta: Di Gioia Felice) 
-
-Riccardo Antonelli (Interpreta: Cocco Benvenuto) 
-
-Stefano Benoni (Interpreta: Era Natale)  
-
-Matteo Coccapani (Interpreta: Bo Lino) 
+* Francesco Bernardi (Interpreta: La Banca Benedetto) 
+* Stefano Marzocca (Interpreta: Dal Seno Bruno) 
+* Alessio Iliceto (Interpreta: Di Gioia Felice) 
+* Riccardo Antonelli (Interpreta: Cocco Benvenuto) 
+* Stefano Benoni (Interpreta: Era Natale)  
+* Matteo Coccapani (Interpreta: Bo Lino) 
