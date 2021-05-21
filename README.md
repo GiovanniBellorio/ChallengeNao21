@@ -32,7 +32,7 @@
 #### Documenti
 
 * [Sito Web](https://naonexus.altervista.org/)
-* [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/slide/SitoWeb_NaoNexus.pdf)
+* [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova1/sito_web_NaoNexus.pdf)
 * [Piano di comunicazione e statistiche]()
 
 
