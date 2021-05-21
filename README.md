@@ -42,7 +42,7 @@
 
 ### Codice
 
-* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/nao_project)
+* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/nao_project_zip)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/app_joystick/app/src)
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task2/server/serverNAO.py)
 
