@@ -18,6 +18,8 @@
 
 ## Elaborato
 
+La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le linee guida della challenge. Il nostro progetto consiste nei seguenti moduli:
+
 ## Prova 1 Nao Challenge
 
 * [Video Presentazione Team]()
