@@ -8,24 +8,28 @@ si compone di 8 partecipanti, i quali si sono impegnati nel creare una rappresen
 ## Soggetto 
 
 Una rappresentazione teatrale di breve durata con il NAO che ha qui la funzione di insegnante,
-il quale, andando ad interagire con gli studenti, inevitabilmente dà vita a “gaffe” tipiche delle lezioni online.
+il quale, andando ad interagire con gli studenti, inevitabilmente dà vita a “gaffe” tipiche delle lezioni online. </br> 
 
-## Découpage tecnico 
+
+## Découpage tecnico 
 
 * Durata: circa 5 minuti 
 * Attori: otto attori e il robot NAO (con funzione di insegnante) 
 * Spazio: schermata su canale zoom 
 * Materiale: canale zoom.  
 
-## Direttori di scena: 
+
+Direttori di scena: 
 
 * Prof. Giovanni Bellorio  
 
-## Scenografo: 
+
+Scenografo: 
 
 * Alessio Iliceto 
 
-## Personaggi e interpreti in ordine di apparizione: 
+
+Personaggi e interpreti in ordine di apparizione: 
 
 * Francesco Bernardi (Interpreta: La Banca Benedetto) 
 * Stefano Marzocca (Interpreta: Dal Seno Bruno) 
