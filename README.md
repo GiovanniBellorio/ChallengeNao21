@@ -4,6 +4,7 @@
 
 ## Indice
 
+* [Preselezione](#Preselezione)
 * [Semifinale](#Semifinale)
 * [Prova 1 Nao Challenge](#Prova-1-Nao-Challenge)
 	* [Social](#Social)
@@ -15,12 +16,16 @@
 * [Autori](#Autori)
 * [Licenza](#Licenza)
 
+## Preselezione
+
+* [Video Presentazione](https://www.youtube.com/watch?v=i5OkYS3a628&ab_channel=NaoNexus)
+* [Video Prototipo Progetto](https://www.youtube.com/watch?v=zavbiuD5vVc&ab_channel=NaoNexus)
 
 ## Semifinale
 
 La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le linee guida della challenge. Il nostro progetto consiste nei seguenti moduli:
 
-## [Prova 1 Nao Challenge](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova1)
+## [Prova 1](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova1) Nao Challenge
 
 * [Video Presentazione Team]()
 * [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
@@ -38,7 +43,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 * [Piano di comunicazione e statistiche]()
 
 
-## Prova 2 Nao Challenge
+## [Prova 2](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2) Nao Challenge
 
 * [Video dimostrativo del progetto]()
 
@@ -49,7 +54,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova2/server/serverNAO.py)
 
 
-## Prova 3 Nao Challenge
+## [Prova 3]((https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3)) Nao Challenge
 
 * [Video spettacolo]()
 * [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
