@@ -4,7 +4,7 @@
 
 ## Indice
 
-* [Elaborato](#Elaborato)
+* [Semifinale](#Semifinale)
 * [Prova 1 Nao Challenge](#Prova-1-Nao-Challenge)
 	* [Social](#Social)
 	* [Documenti](#Documenti)   
@@ -16,11 +16,11 @@
 * [Licenza](#Licenza)
 
 
-## Elaborato
+## Semifinale
 
 La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le linee guida della challenge. Il nostro progetto consiste nei seguenti moduli:
 
-## Prova 1 Nao Challenge
+## [Prova 1 Nao Challenge](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova1)
 
 * [Video Presentazione Team]()
 * [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
