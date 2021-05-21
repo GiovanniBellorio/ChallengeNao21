@@ -5,54 +5,54 @@
 ## Indice
 
 * [Elaborato](#Elaborato)
-  * [Prova 1 Nao Challenge](#Prova-1-Nao-Challenge)
-    * [Social](#Social)
-    * [Documenti](#Documenti)   
-  * [Prova 2 Nao Challenge](#Prova-2-Nao-Challenge)
-    * [Codice](#Codice)
-  * [Prova 3 Nao Challenge](#Prova-3-Nao-Challenge)
-  	* [Codice](#Codice)
+* [Prova 1 Nao Challenge](#Prova-1-Nao-Challenge)
+	* [Social](#Social)
+	* [Documenti](#Documenti)   
+* [Prova 2 Nao Challenge](#Prova-2-Nao-Challenge)
+	* [Codice](#Codice)
+* [Prova 3 Nao Challenge](#Prova-3-Nao-Challenge)
+	* [Codice](#Codice)
 * [Autori](#Autori)
 * [Licenza](#Licenza)
 
 
 ## Elaborato
 
-### Prova 1 Nao Challenge
+## Prova 1 Nao Challenge
 
 * [Video Presentazione Team]()
 * [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
 
-#### Social
+### Social
 
 * [Instagram](https://www.instagram.com/naonexus/)
 * [LinkedIn](https://www.linkedin.com/in/nao-nexus-95b929208/)
 * [YouTube](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
 
-#### Documenti
+### Documenti
 
 * [Sito Web](https://naonexus.altervista.org/)
 * [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/slide/SitoWeb_NaoNexus.pdf)
 * [Piano di comunicazione e statistiche]()
 
 
-### Prova 2 Nao Challenge
+## Prova 2 Nao Challenge
 
 * [Video dimostrativo del progetto]()
 
-#### Codice
+### Codice
 
 * [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/nao_project)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/app_joystick/app/src)
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task2/server/serverNAO.py)
 
 
-### Prova 3 Nao Challenge
+## Prova 3 Nao Challenge
 
 * [Video spettacolo]()
 * [Sceneggiatura]()
 
-#### Codice
+### Codice
 
 * [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/studenti)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/app_bottonistudenti)
