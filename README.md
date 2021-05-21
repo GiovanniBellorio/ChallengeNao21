@@ -1,6 +1,6 @@
 # Nao Challenge - 21
 
-![alt text](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task1/logo_conScritta.png)
+![alt text](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova1/logo_conScritta.png)
 
 ## Indice
 
@@ -42,21 +42,21 @@
 
 ### Codice
 
-* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/nao_project_zip)
-* [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/app_joystick/app/src)
-* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task2/server/serverNAO.py)
+* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/nao_project_zip)
+* [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/app_joystick/app/src)
+* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova2/server/serverNAO.py)
 
 
 ## Prova 3 Nao Challenge
 
 * [Video spettacolo]()
-* [Sceneggiatura]()
+* [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
 
 ### Codice
 
-* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/studenti)
-* [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/app_bottonistudenti)
-* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task3/server/serverNAO.py)
+* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3/studenti)
+* [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3/app_bottonistudenti)
+* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/server/serverNAO.py)
 
 
 ## Autori
