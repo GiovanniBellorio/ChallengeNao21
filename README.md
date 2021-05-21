@@ -4,16 +4,14 @@
 
 ## Indice
 
-* [Codice](#Codice)
-  * [Web App](#Web-App)
-    * [Flask](#Flask)
-      * [Gestione delle Sessioni Cache Cookie](#Gestione-delle-Sessioni-Cache-Cookie)
-    * [CouchDb](#CouchDb)
-    * [Template Grafico](#Template-Grafico)
-    * [Deploy Applicazione Python](#Deploy-Applicazione-Python)
-  * [Wireless Detection App](#Wireless-Detection-App)
-    * [Cython](#Cython)
-  * [Documentazione](#Documentazione)
+* [Elaborato](#Elaborato)
+  * [Prova 1 Nao Challenge](#Prova-1-Nao-Challenge)
+    * [Social](#Social)
+    * [Documenti](#Documenti)   
+  * [Prova 2 Nao Challenge](#Wireless-Detection-App)
+    * [Codice](#Codice2)
+  * [Prova 3 Nao Challenge](#Documentazione)
+  	* [Codice](#Codice3)
 * [Autori](#Autori)
 * [Licenza](#Licenza)
 
@@ -23,18 +21,17 @@
 ### Prova 1 Nao Challenge
 
 * [Video Presentazione Team]()
-* [Link Sezione Aggiornamenti sito]()
+* [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
 
 #### Social
 
-* [Instagram]()
-* [Facebook]()
-* [LinkedIn]()
-* [YouTube]()
+* [Instagram](https://www.instagram.com/naonexus/)
+* [LinkedIn](https://www.linkedin.com/in/nao-nexus-95b929208/)
+* [YouTube](https://www.youtube.com/channel/UCGr9x7Fr44V628GJXwMe4Pg)
 
 #### Documenti
 
-* [Sito Web]()
+* [Sito Web](https://naonexus.altervista.org/)
 * [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/slide/SitoWeb_NaoNexus.pdf)
 * [Piano di comunicazione e statistiche]()
 
@@ -47,26 +44,26 @@
 
 * [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/nao_project)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/app_joystick/app/src)
-* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task2/server)
+* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task2/server/serverNAO.py)
 
 
 ### Prova 3 Nao Challenge
 
 * [Video spettacolo]()
-* [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task3/copione%20NAO%20Challenge%202021%20v3%20-%20Short%203%20min%20version.docx)
+* [Sceneggiatura]()
 
 #### Codice
 
-* [App Choreographe]()
-* [App Android]()
-* [App Server]()
+* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/studenti)
+* [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/task3/app_bottonistudenti)
+* [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/task3/server/serverNAO.py)
 
 
 ## Autori
 
 Per critiche o nuove idee contattare liberamente:
 
-* naonexusocial@gmail.com (GIOVANNI BELLORIO)
+* naonexusocial@gmail.com (NAONEXUS)
 
 
 ## Licenza
