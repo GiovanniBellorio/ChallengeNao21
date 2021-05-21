@@ -54,7 +54,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova2/server/serverNAO.py)
 
 
-## [Prova 3]((https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3)) Nao Challenge
+## [Prova 3](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3) Nao Challenge
 
 * [Video spettacolo]()
 * [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
@@ -70,7 +70,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 Per critiche o nuove idee contattare liberamente:
 
-* naonexusocial@gmail.com (NAONEXUS)
+* socialnaonexus@gmail.com (NAONEXUS)
 
 
 ## Licenza
