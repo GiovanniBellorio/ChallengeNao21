@@ -49,7 +49,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 #### Codice
 
-* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/nao_project_zip)
+* [App Choreographe](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/nao_project)
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2/app_joystick/app/src)
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova2/server/serverNAO.py)
 
