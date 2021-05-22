@@ -28,6 +28,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 ## [Prova 1](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova1) Nao Challenge
 
 * [Video Presentazione Team]()
+* [Brainstorming Sketching]()
 * [Link Sezione Aggiornamenti sito](https://naonexus.altervista.org/press/)
 
 #### Social
@@ -46,6 +47,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 ## [Prova 2](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2) Nao Challenge
 
 * [Video dimostrativo del progetto]()
+* [Brainstorming Sketching]()
 
 #### Codice
 
@@ -56,8 +58,9 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 ## [Prova 3](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3) Nao Challenge
 
-* [Video spettacolo]()
+* [Video spettacolo](https://www.youtube.com/watch?v=2fzngTP2yPg)
 * [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
+* [Brainstorming Sketching]()
 
 #### Codice
 
