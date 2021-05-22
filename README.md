@@ -41,7 +41,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 * [Sito Web](https://naonexus.altervista.org/)
 * [Descrizione Sito Web](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova1/sito_web_NaoNexus.pdf)
-* [Piano di comunicazione e statistiche]()
+* [Piano di comunicazione e statistiche](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova1/statistiche_social.pdf)
 
 
 ## [Prova 2](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova2) Nao Challenge
@@ -60,7 +60,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 * [Video spettacolo](https://www.youtube.com/watch?v=2fzngTP2yPg)
 * [Sceneggiatura](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/sceneggiatura.pdf)
-* [Brainstorming Sketching]()
+* [Brainstorming Sketching](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/brainstorming.pdf)
 
 #### Codice
 
