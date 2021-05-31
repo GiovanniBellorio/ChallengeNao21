@@ -66,6 +66,12 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 * [App Android](https://github.com/GiovanniBellorio/ChallengeNao21/tree/master/prova3/app_bottonistudenti)
 * [App Server](https://github.com/GiovanniBellorio/ChallengeNao21/blob/master/prova3/server/serverNAO.py)
 
+## Finale
+
+Stravolgi il tuo Museo!
+
+* [Presentazione]()
+
 
 ## Autori
 
