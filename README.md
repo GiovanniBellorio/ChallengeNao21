@@ -13,6 +13,7 @@
 	* [Codice](#Codice)
 * [Prova 3 Nao Challenge](#Prova-3-Nao-Challenge)
 	* [Codice](#Codice)
+* [Finale](#Finale)
 * [Autori](#Autori)
 * [Licenza](#Licenza)
 
