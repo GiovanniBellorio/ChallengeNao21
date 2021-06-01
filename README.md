@@ -71,7 +71,7 @@ La nostra squadra, NaoNexus, ha elaborato il seguente progetto, seguendo le line
 
 Stravolgi il tuo Museo!
 
-* [Presentazione]()
+* [Presentazione](https://prezi.com/view/XwITQM1trxrfbg0DLdbA/)
 
 
 ## Autori
